@@ -1,0 +1,147 @@
+:root {
+  --primary-color: #3d0075;
+  --secondary-color: #6c6cc9;
+  --heading-color: #4b3f72;
+  --text-color: #6e7074;
+  --font-name: "Montserrat", sans-serif;
+  --subtitle-font-name: "Island Moments", cursive;
+}
+
+/* General Header Styling */
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  margin-top: 20px;
+  background-color: white;
+  box-shadow: 3px 3px 8px -3px #ddd;
+  padding: 20px;
+}
+
+/* Logo and Header Layout */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo__image {
+  width: 50px;
+  height: 50px;
+}
+
+.logo__name {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--heading-color);
+  margin: 0;
+  white-space: nowrap;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+
+}
+
+.nav__item {
+  list-style: none;
+  
+}
+#one{
+  text-decoration: none;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: var(--heading-color);
+  font-weight: 500;
+  font-size: 1.2rem;
+  
+}
+
+.nav__link:hover {
+  color: var(--secondary-color);
+  
+}
+
+.nav__link.active__link {
+  color: var(--secondary-color);
+}
+
+/* Right Section Styling */
+.nav__right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.nav__btns .btn {
+  font-size: 1rem;
+  white-space: nowrap; /* Prevents text wrapping inside the button */
+}
+
+.nav__btns .btn a {
+  display: inline-block; /* Ensures the link text inside buttons behaves like a single line */
+  text-decoration: none; /* Removes underline from the link */
+  color: inherit; /* Ensures link color inherits from the button */
+  padding: 0 10px; /* Optional: Adjust padding for proper spacing */
+}
+
+/* User Info Box Styling */
+.user-info-box {
+  background-color: #f9f9f9; /* Light background for the box */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  display: inline-flex;
+}
+
+.user-info-box:hover {
+  transform: translateY(-5px); /* Hover animation */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+}
+
+.user-info__content {
+  display: flex;
+  align-items: center;
+}
+
+.user-photo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.user-photo:hover {
+  transform: scale(1.1); /* Enlarge image slightly on hover */
+}
+
+.user-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--heading-color);
+}
+
+/* Responsive Styling */
+@media only screen and (max-width: 992px) {
+  .nav__btns {
+    flex-wrap: nowrap; /* Prevents wrapping of buttons in smaller screens */
+  }
+}
+  
